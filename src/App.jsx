@@ -11,8 +11,11 @@ function App() {
 
   return (
     <div className="app">
-      <h3>Welcome to the store</h3>
+      <h1>Welcome to the store</h1>
+      <h2>Products</h2>
+
       <ProductList products={products} setCart={setCart} />
+      <h2>Cart</h2>
       <Cart cart={cart} setCart={setCart} />
     </div>
   );

@@ -1,19 +1,14 @@
 import React from "react";
+import { useCartStore } from "../store/CartStore";
 
-const ProductList = ({ products, setCart }) => {
+const ProductList = ({ products }) => {
+  const addToCart = useCartStore((state) => state.addToCart);
   return (
-    <div>
-      <h3>Products</h3>
+    <div className="productList">
       {products.map((product) => (
-        <div key={product.id}>
+        <div className="product" key={product.id}>
           <h4>{product.name}</h4>
-          <button
-            onClick={() => {
-              setCart((cart) => [...cart, product]);
-            }}
-          >
-            Add to Cart
-          </button>
+          <button onClick={() => addToCart(product)}>Add to Cart</button>
         </div>
       ))}
     </div>

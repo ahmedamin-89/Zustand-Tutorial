@@ -40,3 +40,18 @@
 .read-the-docs {
   color: #888;
 }
+
+.productList,
+.cartList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.product,
+.cartItem {
+  color: #1a1a1a;
+  background-color: white;
+  padding: 20px;
+  border-radius: 20px;
+}
